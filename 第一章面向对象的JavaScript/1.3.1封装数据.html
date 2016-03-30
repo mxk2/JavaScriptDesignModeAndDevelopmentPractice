@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var myObject = (function(){
+			var _name = "seven";	//私有（private）变量
+			return {
+				getName: function(){	//公开（public）方法
+					return _name;
+				}
+			};
+		})();
+
+		console.log(myObject.getName());
+		console.log(myObject._name);
+	</script>
+</body>
+</html>

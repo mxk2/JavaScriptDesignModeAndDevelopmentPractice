@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script type="text/javascript">
+		var googleMap = {
+			show: function(){
+				console.log('开始渲染谷歌地图');
+			}
+		};
+		var baiduMap = {
+			show: function(){
+				console.log("开始渲染百度地图");
+			}
+		};
+		var renderMap = function(map){
+			if(map.show instanceof Function){
+				map.show();
+			}
+		};
+
+		renderMap(googleMap);
+		renderMap(baiduMap);
+
+		var sosoMap = {
+			show: function(){
+				console.log("开始渲染搜搜地图");
+			}
+		};
+		renderMap(sosoMap);
+	</script>
+</body>
+</html>
